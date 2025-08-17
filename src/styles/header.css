@@ -1,0 +1,59 @@
+:root {
+    --primary-color: rgb(4, 4, 221);
+}
+
+a {
+    color: black;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.left-header-section {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    padding: 16px 20px;
+    height: 82px;
+    border-radius: 60px;
+    top: 47px;
+    justify-content: space-between;
+    background-color: white;
+    margin: 0 91px;
+    box-shadow: 0px 10px 10px white;
+}
+
+.header-list {
+    display: flex;
+    gap: 20px;
+}
+
+.middle-header-section {
+    align-content: center;
+}
+
+.right-header-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-button {
+    width: 143px;
+    height: 46px;
+    border-radius: 25px;
+}
+
+.get-started-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.dashboard-button {
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
