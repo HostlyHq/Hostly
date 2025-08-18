@@ -1,8 +1,9 @@
+import '../styles/footer.css'
 
 export default function Footer () {
     return (
         <div className="flex flex-col py-10 justify-self-center">
-            <div className="grid grid-cols-1 md:grid-2 gap-20 text-gray-950">
+            <div className="grid grid-cols-2 sm:grid-col-1 gap-20 text-gray-950">
                 <div className="justify-self-center">
                     <div className="footer-image-container">
                         <img src="/public/WhatsApp Image 2025-08-10 at 14.47.43_676dfb90 1.svg" alt="" />

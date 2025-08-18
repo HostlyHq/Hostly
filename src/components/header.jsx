@@ -1,8 +1,8 @@
 
 export default function Header() {
     return (
-        <header className="relative flex px-4 py-5 rounded-full justify-between
-            bg-white my-22 top-12 shadow-white">
+        <header className="relative flex px-10 py-5 rounded-full justify-between
+            bg-white top-12 shadow-white gap-10">
             <div className="flex justify-center">
                 <img src="/WhatsApp Image 2025-08-10 at 14.47.43_676dfb90 1.svg" alt="" />
             </div>
