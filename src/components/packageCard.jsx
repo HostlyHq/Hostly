@@ -2,7 +2,7 @@ import formatPrice from '../utils/formatPrice.jsx';
 
 export default function PackageCard (props) {
    return (
-        <div className="flex flex-col max-w-[300px] min-w-[300px] text-gray-950
+        <div key={props.header} className="flex flex-col max-w-[300px] min-w-[300px] text-gray-950
             rounded-2xl border-2 border-solid border-gray-500
             p-5">
             <p className="text-[28px] font-semibold mb-2

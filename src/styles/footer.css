@@ -4,4 +4,10 @@
     text-align: start;
     font-weight: 400;
     margin-bottom: 24px;
+    height: 25px;
+}
+
+.footer-links:hover {
+    border: none;
+    border-bottom: 2px solid blue;
 }

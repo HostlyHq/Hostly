@@ -1,4 +1,5 @@
 const packagesData = [{
+    id: 1,
     header: 'Starter',
     description: 'With all your customers conversation channels in one dashboard',
     priceCents: 0,
@@ -8,6 +9,7 @@ const packagesData = [{
     ],
 
 }, {
+    id: 2,
     header: 'Standard',
     description: 'With all your customers conversation channels in one dashboard',
     priceCents: 420,
@@ -16,6 +18,7 @@ const packagesData = [{
         'Softaculous'
     ],
 }, {
+    id: 3,
     header: 'Suprem',
     description: 'With all your customers conversation channels in one dashboard',
     priceCents: 700,
