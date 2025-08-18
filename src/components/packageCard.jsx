@@ -1,18 +1,25 @@
-import '../styles/packageCard.css';
 import formatPrice from '../utils/formatPrice.jsx';
 
 export default function PackageCard (props) {
    return (
-        <div className="package-container">
-            <p className="package-header">{props.header}</p>
-            <p className="package-description">
+        <div className="flex flex-col max-w-[300px] min-w-[300px] text-gray-950
+            rounded-2xl border-2 border-solid border-gray-500
+            p-5">
+            <p className="text-[28px] font-semibold mb-2
+                text-start">{props.header}</p>
+            <p className="text-[12px] text-start mb-5">
                 {props.description}
             </p>
-            <p className="package-price">{formatPrice(props.priceCents)}</p>
-            <p className="package-per-month">Per month</p>
-            <button className="choose-plan-button">Choose this plan</button>
+            <p className="text-5xl leading-8 font-semibold
+                text-start mb-1.5">{formatPrice(props.priceCents)}</p>
+            <p className="text-[14px] font-light text-start
+                mb-6">Per month</p>
+            <button className="w-full h-12 text-gray-950 mb-6 
+                bg-white rounded-[14px] border-2 text-[14px]
+                font-semibold border-gray-950">Choose this plan</button>
             <div>
-                <ul className='benefit-list'>
+                <ul className='text-start pl-5 text-gray-500 font-semibold
+                    leading-6 list-disc'>
                     {props.benefit}
                 </ul>
             </div>

@@ -1,32 +1,37 @@
-import '../styles/header.css'
 
 export default function Header() {
     return (
-        <header className="header">
-            <div className="left-header-section">
+        <header className="relative flex px-4 py-5 rounded-full justify-between
+            bg-white my-22 top-12 shadow-white">
+            <div className="flex justify-center">
                 <img src="/WhatsApp Image 2025-08-10 at 14.47.43_676dfb90 1.svg" alt="" />
             </div>
-            <div className="middle-header-section">
+            <div className="content-center">
                 <nav className='header-navigation'>
-                    <ul className='header-list'>
+                    <ul className='flex gap-5'>
                         <li className='header-list-item'>
-                            <a href="#about">About</a>
+                            <a className="text-gray-950 text-[18px] font-semibold" 
+                                href="#about">About</a>
                         </li>
                         <li className='header-list-item'>
-                            <a href="#pricing">Products</a>
+                            <a className="text-gray-950 text-[18px] font-semibold" 
+                                href="#pricing">Products</a>
                         </li>
                         <li className='header-list-item'>
-                            <a href="#pricing">Pricing</a>
+                            <a className="text-gray-950 text-[18px] font-semibold" 
+                                href="#pricing">Pricing</a>
                         </li>
                         <li className='header-list-item'>
-                            <a href="#contact">Contact us</a>
+                            <a className="text-gray-950 text-[18px] font-semibold"
+                                href="#contact">Contact us</a>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <div className="right-header-section">
-                <button className="dashboard-button header-button">Dashboard</button>
-                <button className="get-started-button header-button">Get Started</button>
+            <div className="flex items-center gap-5">
+                <button className="w-[143px] h-12 rounded-full bg-white
+                    text-blue-600 border-2 border-solid">Dashboard</button>
+                <button className="w-[143px] h-12 rounded-full bg-blue-600 text-white">Get Started</button>
             </div>
             
         </header>
