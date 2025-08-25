@@ -1,5 +1,6 @@
 
 import templatesDats from "../data/texmplates"
+import compareData from "../data/comparesData"
 
 export default function Deploy () {
     const templateElements = templatesDats.map( template => {
@@ -21,14 +22,14 @@ export default function Deploy () {
         )
     })
     return (
-        <div>
+        <div className="px-5 content-center"> 
             <div>
                 <div className="flex flex-col gap-6">
                     <h1 className="text-blue-600 text-5xl font-bold">How Hostly Compares</h1>
                     <p className="text-gray-950 text-[20px]">See how Hostly stacks up against other popular Hosting apps.</p>
                 </div>
-                <div>
-                    
+                <div >
+                    <CompareCards/>
                 </div>
             </div>
             <div className="flex justify-self-center gap-20 mt-10 border-2 border-l-gray-100
@@ -75,6 +76,73 @@ export default function Deploy () {
                 </div>
             </div>
         </div>
-        
+    )
+}
+
+function CompareCards () {
+    const compareElements = compareData.map( compare => {
+        const borderColor = compare.ours ? 'border-blue-600' : 'border-gray-100'
+        const badge = compare.ours ? <p className="text-[12px] text-blue-300 font-semibold bg-blue-50 px-2 py-0.5 rounded-full">You are here</p> : ''
+        const headingColor = compare.ours ? 'text-blue-600' : 'text-gray-700'
+        return (
+            <div key={compare.id} className={`border-2 ${borderColor} max-w-[350px] h-[380px]
+                p-6 content-center rounded-2xl`}>
+                <div className="flex items-center gap-3 mb-6">
+                    <p className={`text-2xl ${headingColor} font-bold
+                        text-start`}>{compare.heading}</p>
+                    {badge}
+                </div>
+                <div className="mb-3">
+                    <p className="text-[14px] font-semibold text-gray-700
+                        text-start">Deployement Speed</p>
+                    <div className="flex gap-3">
+                        <img src={`${compare.icons.deploy}`}/>
+                        <p className="text-[14px] text-gray-700 
+                            text-start">{compare.deploy}</p>
+                    </div>
+                </div>
+                <div className="mb-3">
+                    <p className="text-[14px] font-semibold text-gray-700
+                        text-start">Server-side Support</p>
+                    <div className="flex gap-3">
+                        <img src={`${compare.icons.server}`}/>
+                        <p className="text-[14px] text-gray-700 font-normal
+                            text-start">{compare.server}</p>
+                    </div>
+                </div>
+                <div className="mb-3">
+                    <p className="text-[14px] font-semibold text-gray-700
+                        text-start">Pricing</p>
+                    <div className="flex gap-3">
+                        <img src={`${compare.icons.pricing}`}/>
+                        <p className="text-[14px] text-gray-700 font-normal
+                            text-start">{compare.pricing}</p>
+                    </div>
+                </div>
+                <div className="mb-3">
+                    <p className="text-[14px] font-semibold text-gray-700
+                        text-start">Free Tier</p>
+                    <div className="flex gap-3">
+                        <img src={`${compare.icons.tier}`}/>
+                        <p className="text-[14px] text-gray-800 font-normal
+                            text-start">{compare.tier}</p>
+                    </div>
+                </div>
+                <div>
+                    <p className="text-[14px] font-semibold text-gray-700
+                        text-start">Custom Domains</p>
+                    <div className="flex gap-3">
+                        <img src={`${compare.icons.domains}`}/>
+                        <p className="text-[14px] text-gray-700 font-normal
+                            text-start">{compare.domain}</p>
+                    </div>
+                </div>
+            </div>
+        )
+    })
+    return (
+        <div className="grid grid-cols-4 gap-5 py-20">
+            {compareElements}
+        </div>
     )
 }

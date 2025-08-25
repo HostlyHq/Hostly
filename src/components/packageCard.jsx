@@ -3,7 +3,7 @@ import formatPrice from '../utils/formatPrice.jsx';
 export default function PackageCard (props) {
    return (
         <div key={props.header} className="flex flex-col max-w-[300px] min-w-[300px] text-gray-950
-            rounded-2xl border-2 border-solid border-gray-500
+            rounded-2xl border-2 border-solid border-gray-500 h-[615px] content-center
             p-5 hover:scale-[1.03] hover:translate-y-[-20px] hover:transform hover:shadow-lg 
             hover:bg-gray-100 transition-all hover:border-b-blue-800 hover:text-blue-600">
             <p className="text-[28px] font-semibold mb-2
@@ -20,7 +20,7 @@ export default function PackageCard (props) {
                 font-semibold border-gray-950 hover:bg-blue-600 hover:border-blue-600
                 hover:text-white transition-all">Choose this plan</button>
             <div>
-                <ul className='text-start pl-5 text-gray-500 font-semibold
+                <ul className='text-start pl-5 text-gray-600 font-semibold
                     leading-6 list-disc'>
                     {props.benefit}
                 </ul>
