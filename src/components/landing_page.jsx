@@ -4,6 +4,7 @@ import Footer from "./footer.jsx";
 import PackageCard from "./packageCard.jsx";
 import packagesData from "../data/packages.jsx";
 import NetworkCard from "./networkCard.jsx";
+import Deploy from "./deploySection.jsx";
 
 export default function Landing_Page () {
     const packagesElement = packagesData.map(_package => {
@@ -26,7 +27,7 @@ export default function Landing_Page () {
                 bg-no-repeat bg-cover">
                 <Header/>
                 <div className="text-center relative h-[515px] top-1/2 left-1/2 w-[75%]
-                    transform translate-x-[-50%] translate-y-[-50%] bg-transparent
+                    transform -translate-x-1/2 -translate-y-1/2 bg-transparent
                     backdrop-blur-md flex flex-col justify-center rounded-4xl min-w-0">
                     <h1 className="font-['Merriweather'] mb-4 font-black
                         text-5xl">YOUR IDEAS. LIVE IN SECONDS</h1>
@@ -61,11 +62,7 @@ export default function Landing_Page () {
                                 heading="Zero Hassle"
                                 description="No config files, No manual server setup"/>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5  items-center justify-between
-                        w-[80%] max-h-20 mb-6 rounded-full py-3 px-4 bg-blue-600 content-center">
-                    <p className="text-2xl font-semibold justify-self-start">BE AMONG US TO EXPERIENCE NEXT-GEN HOSTING</p>
-                    <button className="h-11 w-[337px] rounded-full bg-gray-700 justify-self-end">Get Early Access Now</button>
-                </div>
+                <Deploy/>
             </div>
             <div className="flex flex-col gap-6 mt-12">
                 <h1 className="text-gray-950 text-2xl font-semibold">Ready to get started with <br/>Hostly?</h1>

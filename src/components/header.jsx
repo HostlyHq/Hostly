@@ -31,8 +31,11 @@ export default function Header() {
             </div>
             <div className="flex items-center gap-5">
                 <button className="w-[143px] h-12 rounded-full bg-white
-                    text-blue-600 border-2 border-solid">Dashboard</button>
-                <button className="w-[143px] h-12 rounded-full bg-blue-600 text-white">Get Started</button>
+                    text-blue-600 border-2 border-solid hover:transform hover:translate-y-[-4px]
+                    hover:bg-black hover:text-white hover:border-0 transition-all">Dashboard</button>
+                <button className="w-[143px] h-12 rounded-full bg-blue-600 text-white
+                hover:bg-black hover:text-white transition-all hover:transform 
+                hover:translate-y-[-4px]">Get Started</button>
             </div>
             
         </header>

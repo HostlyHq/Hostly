@@ -4,7 +4,8 @@ export default function PackageCard (props) {
    return (
         <div key={props.header} className="flex flex-col max-w-[300px] min-w-[300px] text-gray-950
             rounded-2xl border-2 border-solid border-gray-500
-            p-5">
+            p-5 hover:scale-[1.03] hover:translate-y-[-20px] hover:transform hover:shadow-lg 
+            hover:bg-gray-100 transition-all hover:border-b-blue-800 hover:text-blue-600">
             <p className="text-[28px] font-semibold mb-2
                 text-start">{props.header}</p>
             <p className="text-[12px] text-start mb-5">
@@ -16,7 +17,8 @@ export default function PackageCard (props) {
                 mb-6">Per month</p>
             <button className="w-full h-12 text-gray-950 mb-6 
                 bg-white rounded-[14px] border-2 text-[14px]
-                font-semibold border-gray-950">Choose this plan</button>
+                font-semibold border-gray-950 hover:bg-black
+                hover:text-white transition-all">Choose this plan</button>
             <div>
                 <ul className='text-start pl-5 text-gray-500 font-semibold
                     leading-6 list-disc'>
