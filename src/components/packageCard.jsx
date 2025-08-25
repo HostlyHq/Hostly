@@ -17,7 +17,7 @@ export default function PackageCard (props) {
                 mb-6">Per month</p>
             <button className="w-full h-12 text-gray-950 mb-6 
                 bg-white rounded-[14px] border-2 text-[14px]
-                font-semibold border-gray-950 hover:bg-black
+                font-semibold border-gray-950 hover:bg-blue-600 hover:border-blue-600
                 hover:text-white transition-all">Choose this plan</button>
             <div>
                 <ul className='text-start pl-5 text-gray-500 font-semibold

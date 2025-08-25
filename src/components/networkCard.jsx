@@ -2,7 +2,8 @@
 export default function NetworkCard(props) {
     return (
         <div className="flex flex-col gap-16 p-8 max-w-[451px] h-[366px]
-                rounded-2xl border border-gray-500">
+                rounded-2xl border-2 shadow-2xl border-l-gray-200 border-r-gray-200 
+                border-b-gray-200">
             <div className="flex justify-between">
                 <div className="w-[92px] h-[92px] bg-blue-950 rounded-[5px] content-center">
                     <img className="justify-self-center" 

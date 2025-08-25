@@ -2,7 +2,8 @@
 export default function ChooseCard (props) {
     return (
         <div className="flex flex-col justify-between p-8 max-w-[298px] h-[243px]
-                rounded-2xl border border-gray-500">
+                rounded-2xl border-2 shadow-2xl border-l-gray-200 border-r-gray-200 
+                border-b-gray-200">
             <div className="flex justify-between">
                 <div className="w-12 h-12 bg-blue-600 rounded-[5px] content-center">
                     <img className="justify-self-center" 
