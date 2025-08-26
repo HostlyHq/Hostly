@@ -6,9 +6,9 @@ export default function Deploy () {
     const templateElements = templatesDats.map( template => {
         console.log(template)
         return (
-             <div key={template.id} className="w-[328px] h-[171px] border border-gray-200">
+             <div key={template.id} className="w-[328px] h-[171px] border border-gray-200 justify-self-center">
                 <div className={`w-full h-[113px] bg-[url('${template.background}')] flex
-                    justify-center items-center`}>
+                    justify-center items-center justify-self-center`}>
                         <div className="w-[66px] h-[66px] border border-gray-950 
                         border-dashed rounded-full flex justify-center items-center">
                             <img className="w-8 h-8 absolute" src={`${template.icon}`}/>
@@ -32,15 +32,16 @@ export default function Deploy () {
                     <CompareCards/>
                 </div>
             </div>
-            <div className="flex justify-self-center gap-20 mt-10 border-2 border-l-gray-100
-            border-r-gray-100">
-                <div className="px-10 border-2 border-r-gray-100 py-30">
+            <div className="flex flex-col justify-self-center gap-20  border-2 border-l-gray-100
+            border-r-gray-100 xl:flex-row">
+                <div className="flex flex-col px-10 border-2 border-r-gray-100 py-5 
+                    justify-center items-center">
                     <div className="mb-20">
-                        <h1 className="text-gray-950 text-start
+                        <h1 className="text-gray-950 text-center xl:text-start
                             text-5xl font-semibold w-80 leading-13">Deploy your first app in seconds</h1>
                     </div>
                     <div className="flex flex-col gap-2">
-                        <div className="flex">
+                        <div className="flex gap-3">
                             <div className="relative flex">
                                 <img className="w-4 h-4" src="deploy-icon-1.svg"/>
                                 <img className="w-4 h-4" src="deplot-icon-2.svg"/>
@@ -49,7 +50,7 @@ export default function Deploy () {
                             </div>
                             <p className="text-gray-500 text-start w-70">Deploy automatically 
                                 <span className="text-gray-950">from git</span> or with 
-                                <span className="text-gray-950">our CLI</span></p>
+                                <span className="text-gray-950"> our CLI</span></p>
                         </div>
                         <div className="flex gap-3">
                             <img className="flex self-start mt-1" src="Wide.svg"/>
@@ -71,7 +72,7 @@ export default function Deploy () {
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-2 max-w-[720px] gap-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 max-w-[720px] gap-10">
                     {templateElements}
                 </div>
             </div>
@@ -81,12 +82,13 @@ export default function Deploy () {
 
 function CompareCards () {
     const compareElements = compareData.map( compare => {
-        const borderColor = compare.ours ? 'border-blue-600' : 'border-gray-100'
+        const borderColor = compare.ours ? 'border-blue-600 hover:bg-blue-100' : 'border-gray-100 hover:bg-blue-50'
         const badge = compare.ours ? <p className="text-[12px] text-blue-300 font-semibold bg-blue-50 px-2 py-0.5 rounded-full">You are here</p> : ''
         const headingColor = compare.ours ? 'text-blue-600' : 'text-gray-700'
         return (
             <div key={compare.id} className={`border-2 ${borderColor} max-w-[350px] h-[380px]
-                p-6 content-center rounded-2xl`}>
+                p-6 content-center rounded-2xl shadow-2xl justify-self-center mb-10 cursor-pointer
+                hover:scale-[1.02] transition-all`}>
                 <div className="flex items-center gap-3 mb-6">
                     <p className={`text-2xl ${headingColor} font-bold
                         text-start`}>{compare.heading}</p>
@@ -141,7 +143,8 @@ function CompareCards () {
         )
     })
     return (
-        <div className="grid grid-cols-4 gap-5 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:w-[700px] xl:grid-cols-4 
+            xl:w-full gap-3 lg:py-10 xl:py-20 justify-self-center">
             {compareElements}
         </div>
     )

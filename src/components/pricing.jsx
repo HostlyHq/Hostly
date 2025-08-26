@@ -9,17 +9,17 @@ export default function Pricing () {
                 <p className="text-2xl text-gray-950 leading-6 font-normal">Choose the package that suits you</p>
                 <div className="flex justify-center gap-10">
                     <p className="text-[25px] font-[500] text-gray-950 self-center">Montly</p>
-                    <div>
+                    <div className='flex items-center'>
                         <label className="relative inline-flex items-center cursor-pointer">
                             <input className="sr-only peer h-[50px]" type="checkbox" />
                             <div className="w-[93px] h-[53px] bg-blue-600 peer-focus:outline-none rounded-full 
                                     peer peer-checked:after:translate-x-full peer-checked:after:border-white 
-                                    after:content-[''] after:absolute
+                                    after:content-[''] after:absolute 
                                     after:top-[5px] after:left-[0px] after:bg-white after:border after:rounded-full after:h-[43px]
                                     after:w-[43px] after:transition-all peer-checked:bg-gray-200"></div>
                         </label>
                     </div>
-                    <div className="flex items-center gap-5">
+                    <div className="flex flex-col lg:flex-row items-center gap-5">
                         <p className="text-[25px] font-[500] text-gray-950 align-middle">Yearly</p>
                         <p className="w-[87px] h-[24px] font-[600] text-[10px] text-gray-950 rounded-[8px] content-center bg-amber-200">20% discount</p>
                     </div>
@@ -57,7 +57,8 @@ function PackageCards () {
             <div key={_package.header} className="flex flex-col max-w-[300px] min-w-[300px] text-gray-950
                 rounded-2xl border-2 border-solid border-gray-500 h-[615px] content-center
                 p-5 hover:scale-[1.03] hover:translate-y-[-20px] hover:transform hover:shadow-lg 
-                hover:bg-gray-100 transition-all hover:border-b-blue-800 hover:text-blue-600">
+                hover:bg-blue-100 transition-all hover:border-b-blue-800 hover:text-blue-600
+                hover:shadow-blue-600 hover:border-x-blue-600">
                 <p className="text-[28px] font-semibold mb-2
                     text-start">{_package.header}</p>
                 <p className="text-[12px] text-start mb-5">
@@ -81,7 +82,7 @@ function PackageCards () {
         )
     })
    return (
-        <div className="justify-self-center mt-6 grid grid-cols-1 md:grid-cols-3 gap-10  content-center items-center
+        <div className="justify-self-center mt-6 grid grid-cols-1 lg:grid-cols-3 gap-10  content-center items-center
                 justify-between">
             {packagesElement}
         </div>

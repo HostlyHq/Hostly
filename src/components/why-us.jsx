@@ -2,20 +2,21 @@
 export default function WhyChooseUS () {
     return (
         <div className="flex flex-col justify-center items-center">
-            <p className="font-inter font-medium text-[18px] text-blue-600
+            <p className="font-inter font-medium text-[12px] md:text-[14px]  
+            lg-text-[18px] text-blue-600
                 leading-[147%] my-6 tracking-[10px] font-['Inter']">Why Choose Us</p>
-            <h1 className="text-gray-600 font-bold text-6xl leading-[100%]
+            <h1 className="text-gray-600 font-bold text-4xl lg:text-6x1 leading-[45px]
                 mb-10">Why Hostly is Different</h1>
-            <div className="flex gap-8 my-6 mb-24">
-                <ChooseCard icon="/public/lightning.png"
+            <div className="flex flex-col items-center lg:flex-row gap-10 my-6 mb-24">
+                <ChooseCard icon="/lightning.png"
                             number='01'
                             heading="Lightning Deploy"
                             description="Launch sites in under 10 seconds"/>
-                <NetworkCard icon={"/public/network.png"}
+                <NetworkCard icon={"/network.png"}
                             number="02"
                             heading="Built for Scale"
                             description="Auto-optimized for millions of visitors" />
-                <ChooseCard icon="/public/checkmark.png"
+                <ChooseCard icon="/checkmark.svg"
                             number='03'
                             heading="Zero Hassle"
                             description="No config files, No manual server setup"/>
