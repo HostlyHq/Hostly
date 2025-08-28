@@ -70,7 +70,7 @@ export default function Header() {
                                 {link.name}
                             </a>
                         ))}
-                        <div className="flex flex-col gap-3 w-full px-6 mt-4">
+                        <div className="flex flex-col gap-3 w-4/6 px-6 mt-4">
                             <button className="w-full h-12 rounded-full border-2 border-blue-600 text-blue-600 bg-white hover:bg-black hover:border-0 hover:text-white transition ">
                                 Dashboard
                             </button>
