@@ -6,8 +6,10 @@ export default function Footer () {
             <div className="grid grid-cols-1 lg:grid-cols-2 text-gray-950">
                 <div className="justify-self-start">
                     <div>
-                        <img className="w-[302px] h-[136px]"
-                            src="/hostly-logo.svg" alt="" />
+                        <a href="/">
+                            <img className="w-[302px] h-[136px]"
+                                src="/hostly-logo.svg" alt="" />
+                        </a>
                     </div>
                     <div className="footer-description"></div>
                 </div>
