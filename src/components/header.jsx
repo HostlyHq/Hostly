@@ -1,70 +1,89 @@
+import { useState } from "react";
+import { X, Menu } from "lucide-react";
 
 export default function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const navLinks = [
+        { name: "About", href: "#about" },
+        { name: "Products", href: "#products" },
+        { name: "Pricing", href: "#pricing" },
+        { name: "Contact Us", href: "#contact" },
+    ];
+
     return (
-        <div className="relative">
-            <header className=" group fixed flex px-0 md:px-10 justify-between
-                bg-white shadow-white gap-10 left-0 right-0 overflow-hidden
-                z-50 border-b-2 border-blue-600 mb-3">
-                <div className="flex items-center justify-between xl:justify-center w-full">
-                    <img className="w-35"
-                        src="/WhatsApp Image 2025-08-10 at 14.47.43_676dfb90 1.svg" alt="hostly logo" />
-                    <img className="w-8 xl:hidden" src="/menu-icon.svg" alt="menu icon"/>
+        <header className="fixed top-0 left-0 right-0 bg-white border-b-2 border-blue-600 shadow z-50">
+            <div className="flex items-center justify-between px-4 md:px-10 py-3">
+                {/* Logo */}
+                <a href="/" className="flex items-center">
+                    <img
+                        src="WhatsApp Image 2025-08-10 at 14.47.43_676dfb90 1.svg"
+                        alt="Hostly logo"
+                        className="w-32 h-auto"
+                    />
+                </a>
+
+                {/* Desktop Nav */}
+                <nav className="hidden xl:flex gap-8">
+                    {navLinks.map((link) => (
+                        <a
+                            key={link.name}
+                            href={link.href}
+                            className="text-gray-900 text-[18px] font-semibold hover:text-blue-600 transition"
+                        >
+                            {link.name}
+                        </a>
+                    ))}
+                </nav>
+
+                {/* Buttons (Desktop only) */}
+                <div className="hidden xl:flex items-center gap-5">
+                    <button className="w-[143px] h-12 rounded-full border-2 border-blue-600 text-blue-600 bg-white hover:bg-black hover:text-white transition-all transform hover:-translate-y-1">
+                        Dashboard
+                    </button>
+                    <button className="w-[143px] h-12 rounded-full bg-blue-600 text-white hover:bg-black transition-all transform hover:-translate-y-1">
+                        Get Started
+                    </button>
                 </div>
-                <div className="content-center hidden xl:inline-block">
-                    <nav className='header-navigation'>
-                        <ul className='flex gap-5'>
-                            <li className='header-list-item'>
-                                <a className="text-gray-950 text-[18px] font-semibold" 
-                                    href="#about">About</a>
-                            </li>
-                            <li className='header-list-item'>
-                                <a className="text-gray-950 text-[18px] font-semibold" 
-                                    href="#pricing">Products</a>
-                            </li>
-                            <li className='header-list-item'>
-                                <a className="text-gray-950 text-[18px] font-semibold" 
-                                    href="#pricing">Pricing</a>
-                            </li>
-                            <li className='header-list-item'>
-                                <a className="text-gray-950 text-[18px] font-semibold"
-                                    href="#contact">Contact us</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div className="items-center gap-5 hidden xl:flex">
-                    <button className="w-[143px] h-12 rounded-full bg-white
-                        text-blue-600 border-2 border-solid hover:transform hover:translate-y-[-4px]
-                        hover:bg-black hover:text-white hover:border-0 transition-all">Dashboard</button>
-                    <button className="w-[143px] h-12 rounded-full bg-blue-600 text-white
-                    hover:bg-black hover:text-white transition-all hover:transform 
-                    hover:translate-y-[-4px]">Get Started</button>
-                </div>
-            </header>
-            <div className="flex flex-col bg-white min-h-screen hidden">
-                <div className="absolute content-center top-7 left-[90%] w-10 h-10">
-                    <img className="justify-self-center w-8" src="cancel-icon.svg"/>
-                </div>
-                <div className="relative py-10 flex flex-col items-center gap-4">
-                    <img className="w-35"
-                        src="/public/WhatsApp Image 2025-08-10 at 14.47.43_676dfb90 1.svg"/>
-                    <div className="flex flex-col w-full px-3">
-                        <a className="text-blue-600 h-12 rounded-[3px] content-center
-                            hover:bg-blue-600 hover:text-white transition-all" href="">Home</a>
-                        <a className="text-blue-600 h-12 rounded-[3px] content-center
-                            hover:bg-blue-600 hover:text-white transition-all" href="">About</a>
-                        <a className="text-blue-600 h-12 rounded-[3px] content-center
-                            hover:bg-blue-600 hover:text-white transition-all" href="">Products</a>
-                        <a className="text-blue-600 h-12 rounded-[3px] content-center
-                            hover:bg-blue-600 hover:text-white transition-all" href="#pricing">Pricing</a>
-                        <a className="text-blue-600 h-12 rounded-[3px] content-center
-                            hover:bg-blue-600 hover:text-white transition-all" href="">Contact us</a>
-                    </div>
-                </div>
-                <div className="absolute w-full top-[95%]">
-                        <p className="text-gray-600 text-center text-[14px]">Hostly Inc. Copyright 2025</p>
-                    </div>
+
+                {/* Mobile menu toggle */}
+                <button
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    className="xl:hidden p-2 text-gray-800"
+                    aria-label="Toggle Menu"
+                >
+                    {menuOpen ? <X size={28} /> : <Menu size={28} />}
+                </button>
             </div>
-        </div>
-    )
+
+            {/* Mobile menu */}
+            {menuOpen && (
+                <div className="xl:hidden bg-white border-t border-gray-200 shadow-md animate-slide-down">
+                    <nav className="flex flex-col items-center gap-4 py-6">
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                onClick={() => setMenuOpen(false)}
+                                className="w-full text-center text-blue-600 py-2 rounded hover:bg-blue-600 hover:text-white transition"
+                            >
+                                {link.name}
+                            </a>
+                        ))}
+                        <div className="flex flex-col gap-3 w-full px-6 mt-4">
+                            <button className="w-full h-12 rounded-full border-2 border-blue-600 text-blue-600 bg-white hover:bg-black hover:text-white transition">
+                                Dashboard
+                            </button>
+                            <button className="w-full h-12 rounded-full bg-blue-600 text-white hover:bg-black transition">
+                                Get Started
+                            </button>
+                        </div>
+                    </nav>
+                    <p className="text-gray-500 text-sm text-center py-3 border-t">
+                        © {new Date().getFullYear()} Hostly Inc.
+                    </p>
+                </div>
+            )}
+        </header>
+    );
 }
