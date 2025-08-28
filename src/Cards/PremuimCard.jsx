@@ -1,6 +1,12 @@
 import formatBillingPrice from "../utils/formatPrice";
 
-export default function PremuimCards({ header, description, priceCents, benefit, billingType }) {
+export default function PremuimCards({
+  header,
+  description,
+  priceCents,
+  benefits,
+  billingType,
+}) {
   return (
     <div
       className="flex flex-col max-w-[300px] min-w-[300px] text-orange-900
@@ -28,7 +34,7 @@ export default function PremuimCards({ header, description, priceCents, benefit,
 
       <div>
         <ul className="text-start pl-5 text-gray-500 font-semibold leading-6 list-disc">
-          {benefit}
+          {benefits}
         </ul>
       </div>
     </div>

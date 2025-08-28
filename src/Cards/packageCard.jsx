@@ -4,7 +4,7 @@ export default function PackageCard({
   header,
   description,
   priceCents,
-  benefit,
+  benefits,
   billingType,
 }) {
   return (
@@ -34,7 +34,7 @@ export default function PackageCard({
 
       <div>
         <ul className="text-start pl-5 text-gray-500 font-semibold leading-6 list-disc">
-          {benefit}
+          {benefits}
         </ul>
       </div>
     </div>
