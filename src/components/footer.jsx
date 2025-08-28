@@ -2,16 +2,19 @@ import '../styles/footer.css'
 
 export default function Footer () {
     return (
-        <div className="flex flex-col py-10 justify-self-center ">
-            <div className="grid grid-cols-1 lg:grid-cols-2 text-gray-950">
-                <div className="justify-self-start">
+        <div className="flex flex-col py-10 px-5 justify-self-center ">
+            <div className="grid grid-cols-1 lg:grid-cols-2 text-gray-950 text-center">
+                <div className="justify-self-start flex flex-col w-full items-center mb-10 lg:items-start">
                     <div>
                         <a href="/">
                             <img className="w-[302px] h-[136px]"
                                 src="/hostly-logo.svg" alt="" />
                         </a>
                     </div>
-                    <div className="footer-description"></div>
+                    <div className="text-center max-w-80 text-pretty lg:text-start">
+                        Trusted web hosting solutions for individuals and businesses. Fast, secure, and scalable 
+                        hosting services with expert support. Get started today and take your online presence to the next level.
+                    </div>
                 </div>
                 <div className="grid grid-col-1 md:grid-cols-4 justify-center gap-6">
                     <div>
@@ -64,7 +67,7 @@ export default function Footer () {
                     </div>
                 </div>
             </div>
-            <div className="lower-footer-section">
+            <div className="mt-10">
                 <p className="text-gray-950 text-center lg:text-start text-[14px]">Hostly Inc. Copyright {new Date().getFullYear()}</p>
             </div>
         </div>  
