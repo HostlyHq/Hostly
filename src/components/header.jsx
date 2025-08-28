@@ -12,12 +12,12 @@ export default function Header() {
     ];
 
     return (
-        <header className="fixed top-0 left-0 right-0 bg-white border-b-2 border-blue-600 shadow z-50">
+        <header className="bg-white fixed left-0 right-0">
             <div className="flex items-center justify-between px-4 md:px-10 py-3">
                 {/* Logo */}
                 <a href="/" className="flex items-center">
                     <img
-                        src="WhatsApp Image 2025-08-10 at 14.47.43_676dfb90 1.svg"
+                        src="hostly-logo.svg"
                         alt="Hostly logo"
                         className="w-32 h-auto"
                     />
@@ -29,7 +29,7 @@ export default function Header() {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-gray-900 text-[18px] font-semibold hover:text-blue-600 transition"
+                            className="text-slate-700 font-medium hover:text-blue-600 transition"
                         >
                             {link.name}
                         </a>
@@ -38,7 +38,8 @@ export default function Header() {
 
                 {/* Buttons (Desktop only) */}
                 <div className="hidden xl:flex items-center gap-5">
-                    <button className="w-[143px] h-12 rounded-full border-2 border-blue-600 text-blue-600 bg-white hover:bg-black hover:text-white transition-all transform hover:-translate-y-1">
+                    <button className="w-[143px] h-12 rounded-full border-2 border-black text-black bg-white hover:bg-black hover:text-white 
+                        transition-all transform hover:-translate-y-1">
                         Dashboard
                     </button>
                     <button className="w-[143px] h-12 rounded-full bg-blue-600 text-white hover:bg-black transition-all transform hover:-translate-y-1">

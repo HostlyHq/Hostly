@@ -7,7 +7,7 @@ export default function Footer () {
                 <div className="justify-self-start">
                     <div>
                         <img className="w-[302px] h-[136px]"
-                            src="/public/WhatsApp Image 2025-08-10 at 14.47.43_676dfb90 1.svg" alt="" />
+                            src="/hostly-logo.svg" alt="" />
                     </div>
                     <div className="footer-description"></div>
                 </div>

@@ -16,7 +16,7 @@ export default function WhyChooseUS () {
                             number="02"
                             heading="Built for Scale"
                             description="Auto-optimized for millions of visitors" />
-                <ChooseCard icon="/checkmark.svg"
+                <ChooseCard icon="/tick-icon.svg"
                             number='03'
                             heading="Zero Hassle"
                             description="No config files, No manual server setup"/>
@@ -56,7 +56,7 @@ function ChooseCard (props) {
                 border-b-gray-200">
             <div className="flex justify-between">
                 <div className="w-12 h-12 bg-blue-600 rounded-[5px] content-center">
-                    <img className="justify-self-center" 
+                    <img className="justify-self-center"
                         src={props.icon}/>
                 </div>
                 <div>
