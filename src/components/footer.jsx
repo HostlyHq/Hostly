@@ -63,7 +63,7 @@ export default function Footer () {
                 </div>
             </div>
             <div className="lower-footer-section">
-                <p className="text-gray-950 text-center lg:text-start text-[14px]">Hostly Inc. Copyright 2025</p>
+                <p className="text-gray-950 text-center lg:text-start text-[14px]">Hostly Inc. Copyright {new Date().getFullYear()}</p>
             </div>
         </div>  
     )

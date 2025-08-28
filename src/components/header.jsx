@@ -71,7 +71,7 @@ export default function Header() {
                             </a>
                         ))}
                         <div className="flex flex-col gap-3 w-full px-6 mt-4">
-                            <button className="w-full h-12 rounded-full border-2 border-blue-600 text-blue-600 bg-white hover:bg-black hover:text-white transition">
+                            <button className="w-full h-12 rounded-full border-2 border-blue-600 text-blue-600 bg-white hover:bg-black hover:border-0 hover:text-white transition ">
                                 Dashboard
                             </button>
                             <button className="w-full h-12 rounded-full bg-blue-600 text-white hover:bg-black transition">
