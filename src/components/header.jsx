@@ -1,14 +1,23 @@
+import { useState } from "react"
 
 export default function Header() {
+    const [ sidebar, setSidebar ] = useState(false)
+
+    function showSidebar () {
+        setSidebar( prevState => !prevState)
+        console.log(sidebar)
+    }
+
     return (
         <div className="relative">
-            <header className=" group fixed flex px-0 md:px-10 justify-between
+            {sidebar ? '' : <header className=" group fixed flex px-0 md:px-10 justify-between
                 bg-white shadow-white gap-10 left-0 right-0 overflow-hidden
                 z-50 border-b-2 border-blue-600 mb-3">
-                <div className="flex items-center justify-between xl:justify-center w-full">
+                <div className="flex items-center justify-between w-full xl:w-fit">
                     <img className="w-35"
                         src="/WhatsApp Image 2025-08-10 at 14.47.43_676dfb90 1.svg" alt="hostly logo" />
-                    <img className="w-8 xl:hidden" src="/menu-icon.svg" alt="menu icon"/>
+                    <img className="w-8 xl:hidden cursor-pointer" src="/menu-icon.svg" alt="menu icon"
+                        onClick={showSidebar}/>
                 </div>
                 <div className="content-center hidden xl:inline-block">
                     <nav className='header-navigation'>
@@ -40,10 +49,12 @@ export default function Header() {
                     hover:bg-black hover:text-white transition-all hover:transform 
                     hover:translate-y-[-4px]">Get Started</button>
                 </div>
-            </header>
-            <div className="flex flex-col bg-white min-h-screen hidden">
-                <div className="absolute content-center top-7 left-[90%] w-10 h-10">
-                    <img className="justify-self-center w-8" src="cancel-icon.svg"/>
+            </header>}
+            
+            {sidebar ?  <div className="flex-col bg-white min-h-screen z-20">
+                <div className="absolute content-center top-7 left-[90%] w-10 h-10 cursor-pointer">
+                    <img className="justify-self-center w-8" src="cancel-icon.svg"
+                     onClick={showSidebar}/>
                 </div>
                 <div className="relative py-10 flex flex-col items-center gap-4">
                     <img className="w-35"
@@ -64,7 +75,7 @@ export default function Header() {
                 <div className="absolute w-full top-[95%]">
                         <p className="text-gray-600 text-center text-[14px]">Hostly Inc. Copyright 2025</p>
                     </div>
-            </div>
+            </div> : ''}
         </div>
     )
 }

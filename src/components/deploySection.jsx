@@ -4,7 +4,6 @@ import compareData from "../data/comparesData"
 
 export default function Deploy () {
     const templateElements = templatesDats.map( template => {
-        console.log(template)
         return (
              <div key={template.id} className="w-[328px] h-[171px] border border-gray-200 justify-self-center">
                 <div className={`w-full h-[113px] bg-[url('${template.background}')] flex
@@ -42,19 +41,19 @@ export default function Deploy () {
                     </div>
                     <div className="flex flex-col gap-2">
                         <div className="flex gap-3">
-                            <div className="relative flex">
+                            <div className="absolute flex">
                                 <img className="w-4 h-4" src="deploy-icon-1.svg"/>
                                 <img className="w-4 h-4" src="deplot-icon-2.svg"/>
                                 <img className="w-4 h-4" src="deploy-icon-3.svg"/>
                                 <img className="w-4 h-4" src="deploy-icon-4.svg"/>
                             </div>
-                            <p className="text-gray-500 text-start w-70">Deploy automatically 
+                            <p className="relative ml-2 text-gray-500 text-start w-70 indent-15">Deploy automatically 
                                 <span className="text-gray-950">from git</span> or with 
                                 <span className="text-gray-950"> our CLI</span></p>
                         </div>
                         <div className="flex gap-3">
-                            <img className="flex self-start mt-1" src="Wide.svg"/>
-                            <p className="text-gray-500 text-start w-70">
+                            <img className="flex self-start mt-1 absolute" src="Wide.svg"/>
+                            <p className="text-gray-500 text-start w-70 relative indent-8">
                                 <span className="text-gray-950">Wide range</span> 
                                 support for the most popular frameworks</p>
                         </div>
@@ -65,8 +64,8 @@ export default function Deploy () {
                                 for evry push</p>
                         </div>
                         <div className="flex gap-3">
-                            <img className="flex self-start mt-1" src="HTTPS.svg"/>
-                            <p className="text-gray-500 text-start w-70">
+                            <img className="flex self-start mt-1 absolute" src="HTTPS.svg"/>
+                            <p className="text-gray-500 text-start w-70 relative indent-7">
                                 <span className="text-gray-950">Automatic HTTPS
                                 </span> for all your domains</p>
                         </div>

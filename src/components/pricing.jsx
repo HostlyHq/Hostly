@@ -47,7 +47,7 @@ function PackageCards () {
     const packagesElement = packagesData.map(_package => {
         const listItem = _package.benefits.map(benefit => {
             return (
-                <div className="flex items-center gap-7 mb-3.5">
+                <div key={benefit} className="flex items-center gap-7 mb-3.5">
                     <img className="fill-black" src="checkmark.svg" alt="" />
                     <p key={benefit} className="h-6 content-center">{benefit}</p>
                 </div>
