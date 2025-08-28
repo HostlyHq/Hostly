@@ -3,7 +3,7 @@ import packagesData from '../data/packages';
 
 export default function Pricing () {
     return (
-        <div id='pricing' className='py-10'>
+        <div className='py-10'>
             <div className="flex flex-col gap-6 mt-12">
                 <h1 className="text-gray-950 text-2xl font-semibold">Ready to get started with <br/>Hostly?</h1>
                 <p className="text-2xl text-gray-950 leading-6 font-normal">Choose the package that suits you</p>
@@ -47,7 +47,7 @@ function PackageCards () {
     const packagesElement = packagesData.map(_package => {
         const listItem = _package.benefits.map(benefit => {
             return (
-                <div className="flex items-center gap-7 mb-3.5">
+                <div key={benefit} className="flex items-center gap-7 mb-3.5">
                     <img className="fill-black" src="checkmark.svg" alt="" />
                     <p key={benefit} className="h-6 content-center">{benefit}</p>
                 </div>

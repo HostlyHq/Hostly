@@ -5,7 +5,7 @@ export default function WhyChooseUS () {
             <p className="font-inter font-medium text-[12px] md:text-[14px]  
             lg-text-[18px] text-blue-600
                 leading-[147%] my-6 tracking-[10px] font-['Inter']">Why Choose Us</p>
-            <h1 className="text-gray-600 font-bold text-4xl lg:text-6x1 leading-[45px]
+            <h1 className="text-gray-600 font-bold text-4xl lg:text-6xl leading-[45px]
                 mb-10">Why Hostly is Different</h1>
             <div className="flex flex-col items-center lg:flex-row gap-10 my-6 mb-24">
                 <ChooseCard icon="/lightning.png"
