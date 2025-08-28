@@ -6,8 +6,8 @@ export default function Deploy () {
     const templateElements = templatesDats.map( template => {
         return (
              <div key={template.id} className="w-[328px] h-[171px] border border-gray-200 justify-self-center">
-                <div className={`w-full h-[113px] bg-[url('${template.background}')] flex
-                    justify-center items-center justify-self-center`}>
+                <div style={{backgroundImage: `url(${template.background})`}}
+                    className={`w-full h-[113px] flex justify-center items-center justify-self-center`}>
                         <div className="w-[66px] h-[66px] rounded-full flex justify-center items-center">
                             <img className="animate-spin" src="/circle-vector.svg" alt="circle vector" />
                             <img className="w-8 h-8 absolute" src={`${template.icon}`}/>
