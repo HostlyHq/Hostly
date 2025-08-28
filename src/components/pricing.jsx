@@ -5,7 +5,8 @@ import PremuimData from "../data/Premuim.jsx";
 import PremuimCards from "../Cards/PremuimCard.jsx";
 import TogglePrice from "../Buttons/buttonprice.jsx";
 import ToggleButtons from "../Buttons/button.jsx";
-import Header from "./header.jsx";
+// import Header from "./header.jsx";
+// import Footer from "./footer.jsx";
 
 export default function Pricing() {
   const [billingType, setBillingType] = useState("monthly");
@@ -58,8 +59,8 @@ export default function Pricing() {
 
   return (
     <div>
-      <Header />
-      <div className="flex flex-col gap-6 mt-12 justify-center w-full p-4">
+      {/* <Header /> */}
+      <div className="flex flex-col gap-6 mt-30 justify-center w-full p-4 ">
         <h1 className="text-gray-950 text-5xl font-semibold">
           Get started with <span className="text-blue-700">Hostly</span>?
         </h1>
