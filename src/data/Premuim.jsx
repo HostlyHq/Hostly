@@ -1,12 +1,12 @@
-const packagesData = [
+const PremuimData = [
   {
     id: 1,
-    header: "Starter",
+    header: "hybrid",
     description:
       "With all your customers conversation channels in one dashboard",
-    priceCents: 0,
+    priceCents: 900,
     benefits: [
-      "2GB SSD",
+      "4GB SSD",
       "10GB Bandwidth",
       "15 Email Accounts",
       "4 Subdomains",
@@ -21,7 +21,7 @@ const packagesData = [
     header: "Standard",
     description:
       "With all your customers conversation channels in one dashboard",
-    priceCents: 420,
+    priceCents: 1500,
     benefits: [
       "2GB SSD",
       "10GB Bandwidth",
@@ -38,7 +38,7 @@ const packagesData = [
     header: "Suprem",
     description:
       "With all your customers conversation channels in one dashboard",
-    priceCents: 700,
+    priceCents: 3000,
     benefits: [
       "2GB SSD",
       "10GB Bandwidth",
@@ -51,5 +51,4 @@ const packagesData = [
     ],
   },
 ];
-
-export default packagesData;
+export default PremuimData;
