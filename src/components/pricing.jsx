@@ -35,7 +35,7 @@ export default function Pricing() {
   });
 
   // PREMIUM
-  const premiumElements = PremuimData.map((_premium) => {
+  const PremuimElements = PremuimData.map((_premium) => {
     const premiumItems = _premium.benefits.map((benefit) => (
       <li key={benefit} className="h-6">
         {benefit}
@@ -55,7 +55,7 @@ export default function Pricing() {
   });
 
   return (
-    <div className="flex flex-col gap-6 mt-12 justify-center">
+    <div className="flex flex-col gap-6 mt-12 justify-center w-full">
       <h1 className="text-gray-950 text-5xl font-semibold">
         Get started with <span className="text-blue-700">Hostly</span>?
       </h1>
@@ -64,7 +64,7 @@ export default function Pricing() {
       </p>
 
       {/* PRICE TOGGLE */}
-      <div className="flex justify-center gap-10 items-center">
+      <div className="flex justify-center gap-3 items-center">
         <p className="text-[25px] font-[500] text-gray-950">Monthly</p>
         <TogglePrice onToggle={handlePriceToggle} />
         <p className="text-[25px] font-[500] text-gray-950">Yearly</p>
@@ -78,7 +78,7 @@ export default function Pricing() {
       {/* BASIC / PREMIUM TOGGLE */}
       <ToggleButtons
         packagesElement={packagesElement}
-        premiumElements={premiumElements}
+        PremuimElements={PremuimElements}
       />
     </div>
   );
