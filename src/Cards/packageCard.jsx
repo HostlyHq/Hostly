@@ -10,8 +10,8 @@ export default function PackageCard({
   return (
     <div
       className="flex flex-col max-w-[300px] min-w-[300px] text-blue-900
-        rounded-2xl border-2 border-solid border-gray-300
-        p-5 hover:shadow-blue-300 shadow-2xl hover:shadow-3xl cursor-pointer hover:scale-[1.02] transition-all hover:border-blue-300"
+        rounded-2xl border-2 border-solid border-gray-300 p-5 hover:shadow-blue-300 shadow-2xl 
+        hover:shadow-3xl cursor-pointer hover:scale-[1.02] transition-all hover:border-blue-300"
     >
       <p className="text-[28px] font-semibold mb-2 text-start">{header}</p>
       <p className="text-[12px] text-start mb-5">{description}</p>

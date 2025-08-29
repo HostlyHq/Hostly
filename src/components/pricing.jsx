@@ -69,19 +69,22 @@ export default function Pricing() {
         </p>
 
         {/* PRICE TOGGLE */}
-        <div className="flex flex-col justify-center gap-3 items-center p-4 sm:flex-row sm:gap-6 md:gap-8">
+        <div className="flex justify-center gap-3 items-center p-4  sm:gap-6 md:gap-8">
           <p className="text-[20px] font-[500] text-gray-950 sm:text-[25px]">
             Monthly
           </p>
           <TogglePrice onToggle={handlePriceToggle} />
-          <p className="text-[20px] font-[500] text-gray-950 sm:text-[25px]">
-            Yearly
-          </p>
-          <div className="flex items-center">
-            <p className="w-[100px] sm:w-[110px] h-[28px] font-[600] text-[12px] text-gray-950 rounded-[8px] flex items-center justify-center bg-amber-300 py-1 px-2 ml-3 sm:ml-5">
-              20% discount
+          <div className="flex flex-col gap-2 lg:flex-row">
+            <p className="text-[20px] font-[500] text-gray-950 sm:text-[25px]">
+              Yearly
             </p>
+            <div className="flex items-center ">
+              <p className="w-[100px] sm:w-[110px] h-[28px] font-[600] text-[12px] text-gray-950 rounded-[8px] flex items-center justify-center bg-amber-300 py-1 px-2 ml-3 sm:ml-5">
+                20% discount
+              </p>
+            </div>
           </div>
+          
         </div>
 
         {/* BASIC / PREMIUM TOGGLE */}
