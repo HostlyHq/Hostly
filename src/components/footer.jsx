@@ -1,4 +1,4 @@
-import '../styles/footer.css'
+import Copyrights from './copyright'
 
 export default function Footer () {
     return (
@@ -67,9 +67,7 @@ export default function Footer () {
                     </div>
                 </div>
             </div>
-            <div className="mt-10">
-                <p className="text-gray-950 text-center lg:text-start text-[14px]">Hostly Inc. Copyright {new Date().getFullYear()}</p>
-            </div>
+            <Copyrights />
         </div>  
     )
 }
