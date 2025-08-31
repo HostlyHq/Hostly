@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion'
 import templatesDats from "../data/texmplates"
 import compareData from "../data/comparesData"
 
@@ -23,10 +23,11 @@ export default function Deploy () {
     return (
         <div className="px-5 content-center"> 
             <div>
-                <div className="flex flex-col gap-6">
+                <motion.div initial={{x: -300, opacity: 0}} whileInView={{x: 0, opacity: 1}} viewport={{once: true}} transition={{duration: 1.2}}
+                     className="flex flex-col gap-6">
                     <h1 className="text-blue-600 text-5xl font-bold">How Hostly Compares</h1>
                     <p className="text-gray-950 text-[20px]">See how Hostly stacks up against other popular Hosting apps.</p>
-                </div>
+                </motion.div>
                 <div >
                     <CompareCards/>
                 </div>
@@ -36,8 +37,8 @@ export default function Deploy () {
                 <div className="flex flex-col px-10 border-2 border-r-gray-100 py-5 
                     justify-center items-center">
                     <div className="mb-20">
-                        <h1 className="text-gray-950 text-center xl:text-start
-                            text-5xl font-semibold w-80 leading-13">Deploy your first app in seconds</h1>
+                        <motion.h1 className="text-gray-950 text-center xl:text-start
+                            text-5xl font-semibold w-80 leading-13">Deploy your first app in seconds</motion.h1>
                     </div>
                     <div className="flex flex-col gap-2">
                         <div className="flex gap-3">

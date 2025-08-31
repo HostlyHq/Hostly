@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 
 export default function WhyChooseUS () {
     return (
@@ -5,8 +6,9 @@ export default function WhyChooseUS () {
             <p className="font-inter font-medium text-[12px] md:text-[14px]  
             lg-text-[18px] text-blue-600
                 leading-[147%] my-6 tracking-[10px] font-['Inter']">Why Choose Us</p>
-            <h1 className="text-gray-600 font-bold text-4xl lg:text-6xl leading-[45px]
-                mb-10">Why Hostly is Different</h1>
+            <motion.h1 initial={{x: 300, opacity: 0}} whileInView={{x: 0, opacity: 1}} viewport={{once: true}} transition={{duration: 1.2}}
+                className="text-gray-600 font-bold text-4xl lg:text-6xl leading-[45px]
+                mb-10">Why Hostly is Different</motion.h1>
             <div className="flex flex-col items-center lg:flex-row gap-10 my-6 mb-24">
                 <ChooseCard icon="/lightning.png"
                             number='01'
