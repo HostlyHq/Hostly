@@ -6,7 +6,7 @@ export default function Home() {
       className="h-screen bg-[url('/hero-background1.jpg')] bg-gray-900 bg-center
             bg-no-repeat bg-cover backdrop-contrast-50 min-h-screen"
     >
-      <Header/>
+      <Header />
       <div
         className="flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                 justify-center items-center"

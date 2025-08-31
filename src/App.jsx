@@ -1,9 +1,11 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'  
-import './App.css'
-import Landing_Page from './pages/landing_page.jsx'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Landing_Page from "./pages/landing_page.jsx";
 import Pricing from "./components/pricing.jsx";
 import Layout from "./pages/layout.jsx";
-import NotFound from './pages/not-found.jsx';
+import ContactUs from "./pages/contactus.jsx";
+import NotFound from "./components/not-found.jsx";
+
 
 function App() {
   return (
@@ -12,11 +14,12 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Landing_Page />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Route>
-        <Route path='*' element={<NotFound />}/>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
 }
 
-export default App
+export default App;
