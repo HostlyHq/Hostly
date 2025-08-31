@@ -4,7 +4,7 @@ import Landing_Page from "./pages/landing_page.jsx";
 import Pricing from "./components/pricing.jsx";
 import Layout from "./pages/layout.jsx";
 import ContactUs from "./pages/contactus.jsx";
-import NotFound from "./components/not-found.jsx";
+import NotFound from "./pages/not-found.jsx";
 
 
 function App() {
