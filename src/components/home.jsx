@@ -4,8 +4,8 @@ import {motion} from 'framer-motion'
 
 export default function Home() {
   return (
-    <div
-      className="h-screen bg-[url('/hero-background1.jpg')] bg-gray-900 bg-center
+    <div style={{backgroundImage: `url('hero-background.jpg')`}}
+      className="h-screen bg-gray-900 bg-center
             bg-no-repeat bg-cover backdrop-contrast-50 min-h-screen"
     >
       <Header />

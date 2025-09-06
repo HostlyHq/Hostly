@@ -46,9 +46,10 @@ export default function Header() {
           >
             Dashboard
           </button>
-          <button className="w-[143px] h-12 rounded-full bg-blue-600 text-white hover:bg-black transition-all transform hover:-translate-y-1">
+          <Link to="/signup" className="w-[143px] h-12 rounded-full bg-blue-600 text-white hover:bg-black transition-all transform 
+            hover:-translate-y-1 content-center">
             Get Started
-          </button>
+          </Link>
         </div>
 
         {/* Mobile menu toggle */}
@@ -79,9 +80,9 @@ export default function Header() {
               <button className="w-full h-12 rounded-full border-2 border-blue-600 text-blue-600 bg-white hover:bg-black hover:border-0 hover:text-white transition ">
                 Dashboard
               </button>
-              <button className="w-full h-12 rounded-full bg-blue-600 text-white hover:bg-black transition">
+              <Link to="/signup" className="content-center w-full h-12 rounded-full bg-blue-900 text-white hover:bg-black transition">
                 Get Started
-              </button>
+              </Link>
             </div>
           </nav>
           <p className="text-gray-500 text-sm text-center py-3 border-t">
