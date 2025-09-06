@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import Copyrights from "../components/copyright"
 
 export default function Signup () {
@@ -19,18 +20,19 @@ export default function Signup () {
     }
 
     return (
-        <div className="grid grid-cols-1 xl:grid-cols-2 min-h-screen p-20 justify-between gap-10 2xl:gap-5">
+        <div className="grid grid-cols-1 xl:grid-cols-2 max-h-screen p-0 xl:p-20 justify-between gap-10 2xl:gap-5 py-10">
             <div className="hidden xl:block relative bg-blue-600 rounded-md">
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-                    flex flex-col gap-20 w-4/5">
-                    <div className="flex items-center justify-between px-5 bg-white rounded-2xl">
+                    gap-20 w-4/5 flex flex-col items-center">
+                    <div className="flex items-center justify-between p-5 bg-white rounded-2xl w-[500px]">
                         <div className="rounded-2xl">
                             <p className="text-slate-950 text-2xl text-start font-semibold">Hosting</p>
                             <p className="slate-950 text-gray-400 text-start">Total Hosted sites</p>
                             <p className="text-slate-950 text-2xl font-semibold">9589+</p>
                         </div>
-                        <div>
+                        <div className="relative">
                             <img className="bg-gray-50 rounded-full" src="sign-up-counter-icon.svg"/>
+                            <p className="absolute text-slate-950 text-2xl font-bold top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" >35%</p>
                         </div>
                     </div>
                     <div>
@@ -38,17 +40,21 @@ export default function Signup () {
                     </div>
                 </div>
             </div>
-            <div className="px-10 justify-self-center w-2xl" > 
-                <img className="justify-self-center xl:justify-self-end" src="hostly-logo.svg" alt="hostly logo" />
+            <div className="px-5  justify-self-center" > 
+                <img className="hidden justify-self-center xl:justify-self-end" src="hostly-logo.svg" alt="hostly logo" />
                 <div className="flex flex-col gap-3 mb-8">
-                    <h1 className="text-4xl font-bold text-slate-950">Sign up for an account</h1>
+                    <h1 className="text-2xl md:text-4xl font-bold text-slate-950">Sign up for an account</h1>
                     <p className="text-18px text-slate-500">Your ideas, Live in seconds</p>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-5 justify-between mb-3">
-                    <button className="border border-slate-500 bg-gray-100 text-slate-950 px-7 py-3 rounded-md">Sign Up with Google</button>
-                    <button className="border border-slate-500 bg-gray-100 text-slate-950 px-7 py-3 rounded-md">Sign Up with Github</button>
+                    <Link className="border border-slate-500 bg-white text-slate-950 px-7 py-3 rounded-md flex
+                        items-center justify-center gap-3">
+                        <span><img src="google-icon.svg" alt="Google icon" /></span>Sign Up with Google</Link>
+                    <Link className="border border-slate-500 bg-white text-slate-950 px-7 py-3 rounded-md flex
+                        items-center justify-center gap-3">
+                        <span><img src="git-icon.svg" alt="Github icon" /></span>Sign Up with Github</Link>
                 </div>
-                <fieldset className="border-t border-slate-500 mb-15 w-4/5 justify-self-center">
+                <fieldset className="border-t border-slate-500 mb-10 w-4/5 justify-self-center">
                     <legend className="text-slate-500 px-2">or with e-mail</legend>
                 </fieldset>
                 <form className="max-w-512px flex flex-col gap-7"
@@ -87,9 +93,9 @@ export default function Signup () {
                         onChange={(e) => handleFormData(e)}
                         placeholder="Password" />
                     <p className="text-gray-400">By creating an account, you agreeing to our <span className="text-slate-950">Privacy Policy</span></p>
-                    <button className="bg-blue-600 text-white py-3 w-full rounded-md mt-10">Sign Up</button>
+                    <button className="bg-blue-600 text-white py-3 w-full rounded-md mt-3">Sign Up</button>
                 </form>
-                <div className="flex justify-between top-4/5">
+                <div className="flex flex-col justify-between mt-15 sm:flex-row">
                     <p className="text-gray-500">Privacy Policy</p>
                     <p className="text-gray-500">Hostly &copy; {new Date().getFullYear()}</p>
                 </div>
